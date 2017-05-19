@@ -2,9 +2,11 @@ require 'sinatra'
 require 'yaml/store'
 require 'sinatra/activerecord'
 require './config/environments'
-require './models/model'
 
 Choices = Array.new([])
+
+class Model < ActiveRecord::Base
+end
 
 get '/' do
     @title="Welcome"
