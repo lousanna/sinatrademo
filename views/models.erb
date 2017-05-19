@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8' />
+<title>Sinatra Demo</title>
+</head>
+<body class='container'>
+<center>
+<h1><%= @title %></h1>
+
+<ul>
+<% @models.each do |model| %>
+<li>
+<%= model.cake %>
+</li>
+<% end %>
+</ul>
+<a href="/">Back to Home</a>
+
+
+</body>
+</html>
