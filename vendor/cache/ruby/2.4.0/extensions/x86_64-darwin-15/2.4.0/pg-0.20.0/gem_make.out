@@ -1,5 +1,5 @@
 current directory: /Users/lousanna/sinatrademo/vendor/cache/ruby/2.4.0/gems/pg-0.20.0/ext
-/usr/local/opt/ruby/bin/ruby -r ./siteconf20170519-22003-16taua0.rb extconf.rb
+/usr/local/opt/ruby/bin/ruby -r ./siteconf20170519-22404-7ok3lf.rb extconf.rb
 checking for pg_config... yes
 Using config values from /usr/local/bin/pg_config
 checking for libpq-fe.h... yes
@@ -148,4 +148,4 @@ linking shared-object pg_ext.bundle
 
 current directory: /Users/lousanna/sinatrademo/vendor/cache/ruby/2.4.0/gems/pg-0.20.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20170519-22003-sfm8qk
+/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20170519-22404-1a0dogb
