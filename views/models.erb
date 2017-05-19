@@ -8,13 +8,15 @@
 <center>
 <h1><%= @title %></h1>
 
-<ul>
+
+<table>
 <% @models.each do |model| %>
-<li>
-<%= model.cake %>
-</li>
+<tr>
+<td><%= i+1 %></td>
+<td><center><%= model.cake %></center</td>
+</tr>
 <% end %>
-</ul>
+</table>
 <a href="/">Back to Home</a>
 
 
