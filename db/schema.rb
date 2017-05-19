@@ -10,9 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519153819) do
+ActiveRecord::Schema.define(version: 20170519174532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "models", id: :serial, force: :cascade do |t|
+    t.string "cake"
+  end
 
 end

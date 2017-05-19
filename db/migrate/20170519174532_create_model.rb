@@ -8,7 +8,4 @@ class CreateModel < ActiveRecord::Migration[4.2]
     def down
         drop_table :models
     end
-    
-    def change
-    end
 end

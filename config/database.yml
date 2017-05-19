@@ -1,12 +1,11 @@
 production:
   adapter: postgresql
   username: user
-  database: app-dev
+  database: development
   host: localhost
 
 development:
-  adapter: sqlite3
-  database: development
+  adapter: postgresql
   username: <%= ENV['PG_USER'] %>
-  password: <%= ENV['PG_PASS'] %>
+  database: development
   host: localhost
