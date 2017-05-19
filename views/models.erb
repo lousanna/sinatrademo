@@ -10,15 +10,16 @@
 
 
 <table>
-<% @models.each do |model| %>
+<% @models.each_with_index do |model, i| %>
 <tr>
 <td><%= i+1 %></td>
 <td><center><%= model.cake %></center</td>
 </tr>
 <% end %>
 </table>
+<p>
 <a href="/">Back to Home</a>
-
+<p>
 
 </body>
 </html>
