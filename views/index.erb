@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8' />
+<title>Sinatra Demo</title>
+</head>
+<body class='container'>
+<center>
+<h1><%= @title %></h1>
+
+<table>
+<% Choices.each_with_index do |text, i| %>
+<tr>
+<td><%= i+1 %></td>
+<td><center><%= text %></center</td>
+</tr>
+<% end %>
+</table>
+
+
+</body>
+</html>
