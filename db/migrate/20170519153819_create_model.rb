@@ -1,4 +1,4 @@
-class CreateModel < ActiveRecord::Migration
+class CreateModel < ActiveRecord::Migration[4.2]
     def up
         create_table :models do |t|
             t.string :cake
