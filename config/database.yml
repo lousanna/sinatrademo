@@ -1,6 +1,6 @@
 production:
   adapter: postgresql
-  username: user
+  username: <%= ENV['PG_USER'] %>
   database: development
   host: localhost
 
