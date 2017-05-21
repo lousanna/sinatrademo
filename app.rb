@@ -41,9 +41,24 @@ get '/models' do
     erb :models
 end
 
+post '/upload' do
+    @tags = JSON.parse(request.body.read)
+    @tags.each do |item|
+        list = Model.where(id: item["id"]).first
+        if list
+            list.cake = item["cake"]
+            if list.save
+                list.to_json
+                else
+                halt 422, list.errors.full_messages.to_json
+            end
+        end
+    end
+end
+
 get '/list' do
+    content_type :json
     @models = Model.all.to_json
-    erb :json
 end
 
 get '/list/:id' do
@@ -57,17 +72,18 @@ post '/list' do
     
     if @model.save
         @model.to_json
+        puts 'Saved'
         else
         halt 422, list.errors.full_messages.to_json
     end
 end
 
 put '/list/:id' do
+        puts 'hello'
     list = Model.where(id: params['id']).first
-    
     if list
         list.cake = params['cake'] if params.has_key?('cake')
-        
+        puts 'hello'
         if list.save
             list.to_json
             else
@@ -88,4 +104,3 @@ delete '/list/:id' do
     
     erb :deleted
 end
-
