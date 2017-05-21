@@ -10,10 +10,9 @@
 
 
 <table>
-<% @models.each_with_index do |model, i| %>
+<% @models.each_line do |model| %>
 <tr>
-<td><%= i+1 %></td>
-<td><center><a href="/list/<%= model.id %>"><%= model.cake %></a></center</td>
+<td><center><%= model %></center</td>
 </tr>
 <% end %>
 </table>
