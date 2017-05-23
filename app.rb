@@ -97,11 +97,12 @@ post '/list' do
     end
 end
 
-put '/list/:id' do
-    list = Model.where(id: params['id']).first
+put '/list/:id/:cake' do
+    list = Model.where(id: params["id"]).first
+    puts list.id
     if list
-        list.cake = params['cake'] if params.has_key?('cake')
-        puts 'hello'
+        list.cake = params["cake"]
+        puts list.cake
         if list.save
             list.to_json
             else
