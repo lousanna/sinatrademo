@@ -13,6 +13,10 @@ class Model < ActiveRecord::Base
     validates :cake, presence: true
 end
 
+class AllModel < ActiveRecord::Base
+    validates :cake, presence: true
+end
+
 get '/' do
     @title="Welcome"
     f = File.open("cake.list", "r")
@@ -54,6 +58,21 @@ post '/upload' do
             end
         end
     end
+end
+
+get '/filelist' do
+    content_type :json
+
+    f = File.open("cake.list", "r")
+    
+    arr = []
+    f.each_line do |line|
+        arr.push(line.strip)
+    end
+    f.close
+    
+    a = arr.map{|s| {"cake": s} }
+    a.to_json
 end
 
 get '/list' do
