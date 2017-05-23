@@ -98,7 +98,6 @@ post '/list' do
 end
 
 put '/list/:id' do
-        puts 'hello'
     list = Model.where(id: params['id']).first
     if list
         list.cake = params['cake'] if params.has_key?('cake')
@@ -108,6 +107,16 @@ put '/list/:id' do
             else
             halt 422, list.errors.full_messages.to_json
         end
+    end
+end
+
+post '/list/:cake' do
+    @model = Model.new
+    @model.cake = params['cake']
+    if @model.save
+        @model.to_json
+        else
+        "Sorry, there was an error!"
     end
 end
 
