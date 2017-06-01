@@ -7,7 +7,9 @@ Usage
 ========
 
 ```
+npm install
 bundle install
+webpack
 rackup
 ```
 
