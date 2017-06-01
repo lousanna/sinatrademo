@@ -13,18 +13,7 @@ class Model < ActiveRecord::Base
     validates :cake, presence: true
 end
 
-class AllModel < ActiveRecord::Base
-    validates :cake, presence: true
-end
-
 get '/' do
-    @title="Welcome"
-    f = File.open("cake.list", "r")
-    f.each_line do |line|
-        puts line
-        Choices.push(line)
-    end
-    f.close
     erb :index
 end
 

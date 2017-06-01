@@ -19,6 +19,8 @@ GEM
     mustermann (1.0.0)
     pg (0.20.0)
     rack (2.0.3)
+    rack-contrib (1.2.0)
+      rack (>= 0.9.1)
     rack-protection (2.0.0)
       rack
     rake (12.0.0)
@@ -40,12 +42,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   pg
+  rack-contrib
   rake
   sinatra
   sinatra-activerecord
   sinatra-cross_origin
 
 BUNDLED WITH
-   1.13.7
+   1.15.0
